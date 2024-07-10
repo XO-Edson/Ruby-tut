@@ -48,7 +48,7 @@ fruits[0]="Apples"
 puts fruits.sort()
 =end
 
-counties = {
+=begin counties = {
     :Kisumu=>"KSM",
     "Mombasa"=>"MSA",
     "Nairobi"=>"NRB"
@@ -56,3 +56,123 @@ counties = {
 }
 
 puts counties[:Kisumu]
+=end
+
+=begin def sayHi(name,age)
+puts "Hello #{name} you are #{age}"
+end
+
+sayHi("Shai",25)
+
+def cube(num)
+return num*num*num
+end
+
+    puts cube(2)
+=end
+
+=begin isMale = true
+isTall= true
+
+if isMale && isTall
+  puts "Yezzir"
+else
+    puts "Naah bro"
+end
+=end
+
+=begin def max(num1,num2,num3)
+
+    if num1>=num2 && num1>= num3
+        return num1
+    elsif num2>=num1 && num2>= num3
+        return num2
+    else 
+        return num3
+    end
+
+end
+
+puts max(3,1,6) 
+=end
+
+=begin puts "Enter First number: "
+
+num1 = gets.chomp.to_f
+
+puts "Operator: "
+
+op =gets.chomp
+
+puts "Enter second number: "
+
+num2 = gets.chomp.to_f
+
+if op === "+"
+    puts (num1+ num2)
+elsif op === "-"
+        puts (num1-num2)
+elsif op === "*"
+        puts (num1* num2)
+elsif op === "/"
+        puts (num1/ num2)
+else
+   puts "Invalid operator"
+
+ end 
+=end
+
+=begin def day_name(day)
+
+    case day
+    when  day = "mon"
+      puts "Monday"
+    when  day = "tue"
+      puts "Tuesday"
+    when day = "wed"
+        puts "Wednesday"
+    else
+      puts "Invalid day"
+    end
+  
+end
+
+
+day_name("tue")
+=end
+
+=begin num = 1
+
+while num<5
+    puts num
+    num+=1
+end 
+=end
+
+secretWord = "Pineapples"
+guess = ""
+
+guessCount = 0
+guessLimit = 3
+outOfGuesses = false
+
+
+while guess != secretWord && !outOfGuesses
+
+    if guessCount < guessLimit 
+        puts "Enter guess: "
+        guess = gets.chomp()
+        guessCount +=1
+    else 
+        outOfGuesses = true
+    end  
+end
+
+
+if outOfGuesses
+    puts "You lose"
+else
+    puts "You Won!!"
+end
+
+
