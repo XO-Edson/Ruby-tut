@@ -149,7 +149,7 @@ while num<5
 end 
 =end
 
-secretWord = "Pineapples"
+=begin secretWord = "Pineapples"
 guess = ""
 
 guessCount = 0
@@ -173,6 +173,27 @@ if outOfGuesses
     puts "You lose"
 else
     puts "You Won!!"
+end 
+=end
+
+
+=begin fruits = ["Apples","Oranges","Bananas","Pineapples"]
+
+fruits.each do |fruit|
+
+    puts fruit
+end 
+=end
+
+def power(base,pow)
+  num=1
+
+pow.times do |i|
+    num = num*base
 end
 
+  return num
+end
+
+puts power(2,3)
 
