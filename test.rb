@@ -185,15 +185,52 @@ fruits.each do |fruit|
 end 
 =end
 
-def power(base,pow)
+=begin def power(base,pow)
   num=1
 
-pow.times do |i|
+pow.times do 
     num = num*base
 end
 
   return num
 end
 
-puts power(2,3)
+puts power(2,3) 
+=end
+
+
+=begin File.open("shai.txt","r+") do |file|
+  file.readline()
+  file.write("Hi")
+
+end 
+=end
+
+=begin begin
+  num = 10/0
+rescue 
+puts "Division error"
+end 
+=end
+
+class Book
+    attr_accessor :title,:author,:pages
+
+    def initialize(title,author,pages)
+            @title = title
+            @author = author
+            @pages= pages
+    end
+end
+
+book1 = Book.new("Harry Potter","JK Roling",400)
+book2 = Book.new("Lord of the rings","Tolkein",500)
+
+
+puts book1.title
+puts book2.author
+
+
+
+
 
