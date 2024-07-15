@@ -1,4 +1,4 @@
-=begin phrase = "FirstName: "
+phrase = "FirstName: "
 phrase2= "LastName: "
 age= "Age: "
 
@@ -14,9 +14,9 @@ resp3 = gets.chomp()
 
 statement = "Hello #{resp1}, how does #{resp3} feel like?... #{resp2} just because"
 puts statement 
-=end
 
-=begin num1 = "First value: "
+
+num1 = "First value: "
 puts num1
 val1=gets.chomp().to_i
 
@@ -25,9 +25,9 @@ puts num2
 val2 = gets.chomp().to_i
 
 puts (val1 * val2) 
-=end
 
-=begin puts "Enter a color: "
+
+puts "Enter a color: "
 color= gets.chomp()
 
 puts "Plural Noun: "
@@ -39,16 +39,16 @@ celebrity= gets.chomp()
 puts "Roses are #{color}"
 puts "#{pluralNoun} are blue"
 puts "I love #{celebrity}" 
-=end
 
-=begin fruits = ["Bananas","Pineapples","Mangoes"]
+
+fruits = ["Bananas","Pineapples","Mangoes"]
 
 fruits[0]="Apples"
 
 puts fruits.sort()
-=end
 
-=begin counties = {
+
+counties = {
     :Kisumu=>"KSM",
     "Mombasa"=>"MSA",
     "Nairobi"=>"NRB"
@@ -56,9 +56,9 @@ puts fruits.sort()
 }
 
 puts counties[:Kisumu]
-=end
 
-=begin def sayHi(name,age)
+
+def sayHi(name,age)
 puts "Hello #{name} you are #{age}"
 end
 
@@ -69,9 +69,9 @@ return num*num*num
 end
 
     puts cube(2)
-=end
 
-=begin isMale = true
+
+isMale = true
 isTall= true
 
 if isMale && isTall
@@ -79,9 +79,9 @@ if isMale && isTall
 else
     puts "Naah bro"
 end
-=end
 
-=begin def max(num1,num2,num3)
+
+def max(num1,num2,num3)
 
     if num1>=num2 && num1>= num3
         return num1
@@ -94,9 +94,9 @@ end
 end
 
 puts max(3,1,6) 
-=end
 
-=begin puts "Enter First number: "
+
+puts "Enter First number: "
 
 num1 = gets.chomp.to_f
 
@@ -120,9 +120,9 @@ else
    puts "Invalid operator"
 
  end 
-=end
 
-=begin def day_name(day)
+
+def day_name(day)
 
     case day
     when  day = "mon"
@@ -139,17 +139,17 @@ end
 
 
 day_name("tue")
-=end
 
-=begin num = 1
+
+num = 1
 
 while num<5
     puts num
     num+=1
 end 
-=end
 
-=begin secretWord = "Pineapples"
+
+secretWord = "Pineapples"
 guess = ""
 
 guessCount = 0
@@ -174,18 +174,18 @@ if outOfGuesses
 else
     puts "You Won!!"
 end 
-=end
 
 
-=begin fruits = ["Apples","Oranges","Bananas","Pineapples"]
+
+fruits = ["Apples","Oranges","Bananas","Pineapples"]
 
 fruits.each do |fruit|
 
     puts fruit
 end 
-=end
 
-=begin def power(base,pow)
+
+def power(base,pow)
   num=1
 
 pow.times do 
@@ -196,24 +196,23 @@ end
 end
 
 puts power(2,3) 
-=end
 
 
-=begin File.open("shai.txt","r+") do |file|
+
+File.open("shai.txt","r+") do |file|
   file.readline()
   file.write("Hi")
 
 end 
-=end
 
-=begin begin
+
   num = 10/0
 rescue 
 puts "Division error"
-end 
-=end
 
-=begin class Book
+
+
+class Book
     attr_accessor :title,:author,:pages
 
     def initialize(title,author,pages)
@@ -229,9 +228,9 @@ book2 = Book.new("Lord of the rings","Tolkein",500)
 
 puts book1.title
 puts book2.author
-=end
 
-=begin class Bio
+
+class Bio
     attr_accessor :firstName,:middleName,:gpa
 
     def initialize(firstName,middleName,gpa)
@@ -252,9 +251,9 @@ user1 = Bio.new("Edson","Michaels",3.7)
 user2 = Bio.new("Shai","Yo",3.2)
 
 puts user2.has_honors 
-=end
 
-=begin class TestQns
+
+class TestQns
     attr_accessor :prompt,:answer
 
     def initialize (prompt,answer)
@@ -288,9 +287,9 @@ end
 end
 
 run_test(questions) 
-=end
 
-=begin class Chef
+
+class Chef
 
     def makeChicken
       puts "The chef Makes a Chicken"
@@ -320,7 +319,7 @@ chef.makeChicken
 
 italian = ItalianChef.new()
 italian.makeSpecialDish 
-=end
+
 
 require "./module.rb"
 
