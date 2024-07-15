@@ -213,7 +213,7 @@ puts "Division error"
 end 
 =end
 
-class Book
+=begin class Book
     attr_accessor :title,:author,:pages
 
     def initialize(title,author,pages)
@@ -229,8 +229,102 @@ book2 = Book.new("Lord of the rings","Tolkein",500)
 
 puts book1.title
 puts book2.author
+=end
 
+=begin class Bio
+    attr_accessor :firstName,:middleName,:gpa
 
+    def initialize(firstName,middleName,gpa)
+        @firstName=firstName
+        @middleName = middleName
+        @gpa= gpa
+    end
 
+    def has_honors
+        if @gpa >= 3.5
+            return true
+        end
+        return false
+    end
+end
+
+user1 = Bio.new("Edson","Michaels",3.7)
+user2 = Bio.new("Shai","Yo",3.2)
+
+puts user2.has_honors 
+=end
+
+=begin class TestQns
+    attr_accessor :prompt,:answer
+
+    def initialize (prompt,answer)
+    @prompt = prompt
+    @answer = answer
+    end
+end
+
+p1 = "What color are apples?\n(a)Blue\n(b)Red\n(c)White"
+p2 = "What color are Bananas?\n(a)Yellow\n(b)Gray\n(c)Pink"
+p3 = "What color are oranges?\n(a)Lavender\n(b)Green\n(c)orange"
+
+questions = [
+    TestQns.new(p1,"b"),
+    TestQns.new(p2,"a"),
+    TestQns.new(p3,"c")
+]
+
+def run_test(questions)
+score = 0
+
+questions.each do |qns|
+puts qns.prompt
+answer = gets.chomp()
+
+if answer == qns.answer 
+  score+=1
+end
+end
+ puts "You got #{score}/#{questions.length} correct!" 
+end
+
+run_test(questions) 
+=end
+
+=begin class Chef
+
+    def makeChicken
+      puts "The chef Makes a Chicken"
+    end
+
+    def makeSalad
+      puts "The chef makes a salad"
+    end
+
+    def makeSpecialDish
+      puts "The chef makes pork ribs"
+    end
+end
+
+class ItalianChef < Chef
+    def makeSpecialDish
+    puts "The chef makes mixed pasta"   
+    end
+
+    def make_penne
+      puts "The chef makes penne pasta"
+    end
+end
+
+chef= Chef.new()
+chef.makeChicken
+
+italian = ItalianChef.new()
+italian.makeSpecialDish 
+=end
+
+require "./module.rb"
+
+include Tools
+Tools.sayHi("Shai") 
 
 
